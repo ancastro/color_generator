@@ -1,10 +1,10 @@
 <template>
   <section class="container">
-    <div :style="{ 'background-color': '#' + color_1, fontSize: '10' + 'px' }"><span><p ref="color_1" v-on:click="copy_color('#' + color_1)" >{{color_1}}</p></span></div>
-    <div :style="{ 'background-color': '#' + color_2, fontSize: '10' + 'px' }"><span><p ref="color_2" v-on:click="copy_color('#' + color_2)">{{color_2}}</p></span></div>
-    <div :style="{ 'background-color': '#' + color_3, fontSize: '10' + 'px' }"><span><p ref="color_3" v-on:click="copy_color('#' + color_3)">{{color_3}}</p></span></div>
-    <div :style="{ 'background-color': '#' + color_4, fontSize: '10' + 'px' }"><span><p ref="color_4" v-on:click="copy_color('#' + color_4)">{{color_4}}</p></span></div>
-    <div :style="{ 'background-color': '#' + color_5, fontSize: '10' + 'px' }"><span><p ref="color_5" v-on:click="copy_color('#' + color_5)">{{color_5}}</p></span></div>
+    <div v-on:click="copy_color('#' + color_1)" :style="{ 'background-color': '#' + color_1, fontSize: '10' + 'px' }"><span><p ref="color_1" v-on:click="copy_color('#' + color_1)" >{{color_1}}</p></span></div>
+    <div v-on:click="copy_color('#' + color_2)" :style="{ 'background-color': '#' + color_2, fontSize: '10' + 'px' }"><span><p ref="color_2" v-on:click="copy_color('#' + color_2)">{{color_2}}</p></span></div>
+    <div v-on:click="copy_color('#' + color_3)" :style="{ 'background-color': '#' + color_3, fontSize: '10' + 'px' }"><span><p ref="color_3" v-on:click="copy_color('#' + color_3)">{{color_3}}</p></span></div>
+    <div v-on:click="copy_color('#' + color_4)" :style="{ 'background-color': '#' + color_4, fontSize: '10' + 'px' }"><span><p ref="color_4" v-on:click="copy_color('#' + color_4)">{{color_4}}</p></span></div>
+    <div v-on:click="copy_color('#' + color_5)" :style="{ 'background-color': '#' + color_5, fontSize: '10' + 'px' }"><span><p ref="color_5" v-on:click="copy_color('#' + color_5)">{{color_5}}</p></span></div>
   </section>
 </template>
 
@@ -32,6 +32,7 @@ export default {
     },
     copy_color: function(color) {
       navigator.clipboard.writeText(color);
+      console.log(`copied color: ${color}`)
     }
   },
   created() {
@@ -69,6 +70,7 @@ export default {
 div {
   flex-grow: 1;
   height: 100vh;
+  cursor: pointer;
 }
 
 div span {
@@ -84,6 +86,7 @@ div p {
   color: #ffffff;
   font-size: 30px;
   font-weight: 300;
+  cursor: pointer;
 }
 
 div p::before { 
