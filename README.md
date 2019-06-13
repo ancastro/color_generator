@@ -4,7 +4,7 @@ Color generator app built using VueJS in NUXT
 ## Usage
 Hit `spacebar` to generate a random color palette
 
-Click a color hex value (***ex. #5AB1BB***) to copy the value to your clipboard. Its that easy 😊
+`Click` a color hex value (***ex. #5AB1BB***) to copy the value to your clipboard. Its that easy 😊
 
 inspired by [coolors.co](https://coolors.co/)
 
