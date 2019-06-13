@@ -3,6 +3,20 @@ Color generator app built using VueJS in NUXT
 
 ![Color Generator](https://github.com/ancastro/color_generator/blob/master/color_generator.png?raw=true)
 
+## Getting started
+
+``` bash
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn run dev
+
+# build for production and launch server
+$ yarn run build
+$ yarn start
+```
+
 ## Usage
 Hit `spacebar` to generate a random color palette
 
